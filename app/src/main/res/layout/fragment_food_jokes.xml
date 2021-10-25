@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGray"
-    tools:context=".FoodJokesFragment">
+    tools:context=".ui.fragment.foodJoke.FoodJokesFragment">
 
     <TextView
         android:id="@+id/text_notifications"

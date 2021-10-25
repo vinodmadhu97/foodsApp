@@ -1,4 +1,4 @@
-package com.example.foodyapp
+package com.example.foodyapp.ui
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.foodyapp.R
 import com.example.foodyapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_recipes, R.id.navigation_favorite_recipes, R.id.navigation_food_jokes
+                R.id.navigation_recipes,
+                R.id.navigation_favorite_recipes,
+                R.id.navigation_food_jokes
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

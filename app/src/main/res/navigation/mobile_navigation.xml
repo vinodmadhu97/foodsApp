@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_recipes"
-        android:name="com.example.foodyapp.RecipesFragment"
+        android:name="com.example.foodyapp.ui.fragment.recipes.RecipesFragment"
         android:label="@string/recipes_fragment"
         tools:layout="@layout/fragment_recipes" />
 
     <fragment
         android:id="@+id/navigation_favorite_recipes"
-        android:name="com.example.foodyapp.FavoriteRecipesFragment"
+        android:name="com.example.foodyapp.ui.fragment.favorite.FavoriteRecipesFragment"
         android:label="@string/favorite"
         tools:layout="@layout/fragment_favorite_recipes" />
 
     <fragment
         android:id="@+id/navigation_food_jokes"
-        android:name="com.example.foodyapp.FoodJokesFragment"
+        android:name="com.example.foodyapp.ui.fragment.foodJoke.FoodJokesFragment"
         android:label="@string/jokes"
         tools:layout="@layout/fragment_food_jokes" />
 </navigation>
