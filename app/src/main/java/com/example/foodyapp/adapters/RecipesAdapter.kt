@@ -11,7 +11,7 @@ import com.example.foodyapp.utils.RecipeDiffUtil
 
 class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
 
-    private var recipe = emptyList<Result>()
+    private var recipes  = emptyList<Result>()
 
     class MyViewHolder(private val binding : RecipesRowLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(result: Result){
@@ -34,19 +34,19 @@ class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentRecipe = recipe[position]
+        val currentRecipe = recipes[position]
         holder.bind(currentRecipe)
 
     }
 
     override fun getItemCount(): Int {
-        return recipe.size
+        return recipes.size
     }
 
     fun setData(newRecipe:FoodRecipe){
-        val diffUtil = RecipeDiffUtil(recipe,newRecipe.results)
+        val diffUtil = RecipeDiffUtil(recipes,newRecipe.results)
         val diffUtilResult = DiffUtil.calculateDiff(diffUtil)
-        recipe =newRecipe.results
+        recipes =newRecipe.results
         diffUtilResult.dispatchUpdatesTo(this)
     }
 }
