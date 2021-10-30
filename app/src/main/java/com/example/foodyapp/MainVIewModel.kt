@@ -16,6 +16,7 @@ import retrofit2.Response
 import java.lang.Exception
 import javax.inject.Inject
 
+//SERVAVE THE DATA FROM ACTIVITY OR FRAGMENT LIFE CYCLE
 @HiltViewModel
 class MainVIewModel @Inject constructor(private val repository: Repository,application: Application) : AndroidViewModel(application){
 
@@ -62,6 +63,7 @@ class MainVIewModel @Inject constructor(private val repository: Repository,appli
         }
     }
 
+    //CHECK THE INTERNET CONNECTION
     private fun hasInternetConnection():Boolean{
 
         val connectivityManager = getApplication<Application>().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
